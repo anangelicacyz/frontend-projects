@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #eef0f4;
+    display: grid;
+    margin: 40px;
+    
+}
+
+.container{
+    background: #ffffff;
+    display: grid;
+    padding: 0;
+    height: 80vh;
+
+
+
+}
+.section1{
+    grid-column: 1/2;
+    padding: 30px;
+    display: grid;
+    align-content: stretch;
+    justify-content: center;
+    align-items: start;
+    grid-template-rows: repeat(3, 1fr);
+
+}
+.section1 h2{
+    border-bottom: 2px solid #ff31ad;
+    font-size: 2.5em;
+    color:#5e5c5d
+}
+.section1>div:nth-child(1){
+    padding: 20px;
+    margin: 0;
+    height: 100%;
+    
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    grid-row: 1/2;
+
+}
+.section1>div:nth-child(2){
+    display: flex;
+    height: 100%;
+    grid-row: 2/3;
+    align-items: center;
+}
+.section2{
+    grid-column: 2/3;
+    padding: 30px;
+    background: #fffbe8;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+}
+#btn-add{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background: #0083ff;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+.text-list{
+    height: 40px;
+    width: 270px;
+    border: #ececf5 1px solid;
+    color:#938aa5;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+.text-list:hover{
+    border: 1px solid #0083ff;
+}
+
+
+#empty{
+    color: black;
+    font-size: 20px;
+    display: none;
+
+}
+#toDoList{
+    display: grid;
+    text-align: center;
+    justify-content: space-around;
+    
+    
+}
+.taskBox{
+    color: #12090a;
+    background: #ffd0a8;
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+    "date  btndelete"
+    "task  task";
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 30px 1fr ;
+    border-radius: 8px;
+
+}
+.taskBox p{
+    grid-area: task;
+}
+.taskBox button{
+    grid-area: btndelete;
+    border: none;
+    background: none;
+    opacity: 0.5;
+    
+}
+.taskBox button:hover{
+    background:rgb(250, 85, 85);
+    opacity: 1;
+    border-radius: 3px;
+}
+.taskBox button img{
+    width: 30px;
+    height: 30px;
+}
+
+.taskBox div{
+    grid-area: date;
+    text-align: start;
+    color: #605858;
+    font-size: 15px;
+}
+#empty.active{
+    display: inherit;
+}
+#alert{
+    color: red;
+    
+}
+.message{
+    display: none;
+}
